@@ -1,4 +1,3 @@
 #todo encontrar culturas
-CULTURA_1 = 'cultura 1'
-
-CULTURA_2 = 'cultura 2'
+cultura_1 = "cana-de-açucar"
+cultura_2 = "Milho"
