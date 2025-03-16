@@ -1,7 +1,8 @@
-from entrada_dados.py import entrada_dados # Importando a função de entrada de dados
-from saida_dados.py import saida_dados # Importando a função de saída de dados
-from atualizar.py import atualizar_dados # Importando a função de atualização de dados
-from deletar.py import deletar_dados # Importando a função de deleção de dados
+from entrada_dados import entrada_dados # Importando a função de entrada de dados
+from objetivo_a.culturas import Culturas
+from saida_dados import saida_dados # Importando a função de saída de dados
+from atualizar import atualizar_dados # Importando a função de atualização de dados
+from deletar import deletar_dados # Importando a função de deleção de dados
 
 # Função para exibir o menu
 def exibir_menu():
@@ -14,6 +15,8 @@ def exibir_menu():
 
 # Função principal para gerenciar o menu
 def main():
+
+    culturas = Culturas.new_or_from_file()
 
     while True:
         exibir_menu()

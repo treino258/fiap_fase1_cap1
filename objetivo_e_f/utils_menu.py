@@ -1,5 +1,4 @@
-from utils_dados import CULTURA_1
-from utils_dados import CULTURA_2
+from objetivo_a.culturas import CULTURA_1, CULTURA_2
 
 # Função para calcular o manejo de insumo com base na área
 def calcular_manejo(cultura, area):
@@ -14,9 +13,9 @@ insumo_por_metro = {
     "cultura1": 500,  # Em mL/m²
     "cultura2": 300   # Em mL/m²
 }
-def input_float(chamada)
+def input_float(chamada):
     texto = ''
-    while not texto.insumeric():
+    while not texto.isnumeric():
         texto = input(chamada)
 
         if texto.isnumeric():
@@ -25,9 +24,9 @@ def input_float(chamada)
         else:
             print('Digite um número válido.')      
 
-def input_int(chamada)
+def input_int(chamada):
     texto = ''
-    while not texto.insumeric():
+    while not texto.isnumeric():
         texto = input(chamada)
 
         if texto.isnumeric():

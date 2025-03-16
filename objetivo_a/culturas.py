@@ -3,7 +3,7 @@ import json
 from time import sleep
 
 
-CULTURA_1 = "cana-de-açucar"
+CULTURA_1 = "Cana-de-Açucar"
 CULTURA_2 = "Milho"
 
 # culturas = {'cultura1': [], 'cultura2': []}
@@ -56,10 +56,10 @@ class Culturas:
 
     def __getitem__(self, key):
 
-        if key == 'cultura_1' or key == 'cultura1' or key.lower() == CULTURA_1.lower():
+        if key.lower() == 'cultura_1' or key.lower() == 'cultura1' or key.lower() == CULTURA_1.lower():
             return self.cultura_1
 
-        elif key == 'cultura_2' or key == 'cultura2' or key.lower() == CULTURA_2.lower():
+        elif key.lower() == 'cultura_2' or key.lower() == 'cultura2' or key.lower() == CULTURA_2.lower():
             return self.cultura_2
 
         else:

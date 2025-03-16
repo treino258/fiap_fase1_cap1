@@ -1,13 +1,15 @@
-from utils_dados import CULTURA_1
-from utils_dados import CULTURA_2
+from objetivo_a.culturas import Culturas
+from objetivo_e_f.utils_menu import input_int, input_float
 
-def atualizar_formato_cultura1(culturas, cultura_nome):  # Função para cultura1
+
+def atualizar_formato_cultura1(culturas:Culturas, cultura_nome):  # Função para cultura1
     print("\nEscolha o registro para atualizar:")
-    if not culturas[cultura_nome]:
+    if not culturas[cultura_nome] or len(culturas[cultura_nome]) == 0:
         print("Nenhum dado registrado.")
+        return
     else:
         for i, dado in enumerate(culturas[cultura_nome], 1):
-            print(f"  Registro {i}: Área = {dado['area']} m², Insumo = {dado['manejo']} mL")
+            print(f"  Registro {i}: Área = {dado}")
     
     # Solicita o índice antes de confirmar
     indice = input_int(f"Pressione 0 para voltar ao menu. Digite o índice do registro a ser atualizado (1 a {len(culturas[cultura_nome])}): ")
@@ -30,6 +32,7 @@ def atualizar_formato_cultura1(culturas, cultura_nome):  # Função para cultura
     if confirmacao in ('0', 'não', 'nao', 'n', 'no', 'NÃO', 'NAO', 'N', 'NO'):
         print("Operação cancelada. Retornando ao menu.")
         return  # Cancela a operação
+
     elif confirmacao == '1' or confirmacao == 'sim':
         print("\nEscolha a nova forma do seu terreno para a plantacao de (cultura1):")
         forma_nome = input(""" 
@@ -50,26 +53,30 @@ def atualizar_formato_cultura1(culturas, cultura_nome):  # Função para cultura
             altura = input_float('Digite as dimensões do primeiro lado: ')
             base = input_float('Digite as dimensões do segundo lado: ')
             area = base * altura
+
+            culturas.replace_area_cultura_1(indice - 1, tipo='1', base=base, altura=altura)
+
+
         elif forma_nome in {'2', 'triangular'}:
             print('Você escolheu o plantio Triangular.')
             altura = input_float('Digite a altura do triângulo: ')
             base = input_float('Digite a base do triângulo: ')
             area = (base * altura) / 2
+            culturas.replace_area_cultura_1(indice - 1, tipo='2', base=base, altura=altura)
         
         # Atualiza o dado no registro escolhido
-        culturas[cultura_nome][indice - 1]['area'] = area
-        culturas[cultura_nome][indice - 1]['manejo'] = area * 500  # Ou o cálculo apropriado
 
-        print(f'A área foi atualizada com sucesso. A nova área do plantio é: {area:.2f}m²')
+        print(f'A área foi atualizada com sucesso. A nova área do plantio é: {area:.2f} m²')
         return area  # Retorna a área calculada
 
-def atualizar_formato_cultura2(culturas, cultura_nome):  # Função para cultura2
+def atualizar_formato_cultura2(culturas:Culturas, cultura_nome):  # Função para cultura2
     print("\nEscolha o registro para atualizar:")
     if not culturas[cultura_nome]:
         print("Nenhum dado registrado.")
+        return
     else:
         for i, dado in enumerate(culturas[cultura_nome], 1):
-            print(f"  Registro {i}: Área = {dado['area']} m², Insumo = {dado['manejo']} mL")
+            print(f"  Registro {i}: Área = {dado}")
     
     # Solicita o índice antes de confirmar
     indice = input_int(f"Pressione 0 para voltar ao menu. Digite o índice do registro a ser atualizado (1 a {len(culturas[cultura_nome])}): ")
@@ -112,15 +119,21 @@ def atualizar_formato_cultura2(culturas, cultura_nome):  # Função para cultura
             altura = input_float('Digite as dimensões do primeiro lado: ')
             base = input_float('Digite as dimensões do segundo lado: ')
             area = base * altura
+
+
+            culturas.replace_area_cultura_2(indice - 1, tipo='1', base=base, altura=altura)
+
         elif forma_nome in {'2', 'triangular'}:
             print('Você escolheu o plantio Triangular.')
             altura = input_float('Digite a altura do triângulo: ')
             base = input_float('Digite a base do triângulo: ')
             area = (base * altura) / 2
+
+            culturas.replace_area_cultura_2(indice - 1, tipo='2', base=base, altura=altura)
         
         # Atualiza o dado no registro escolhido
-        culturas[cultura_nome][indice - 1]['area'] = area
-        culturas[cultura_nome][indice - 1]['manejo'] = area * 500  # Ou o cálculo apropriado
+        # culturas[cultura_nome][indice - 1]['area'] = area
+        # culturas[cultura_nome][indice - 1]['manejo'] = area * 500  # Ou o cálculo apropriado
 
         print(f'A área foi atualizada com sucesso. A nova área do plantio é: {area:.2f}m²')
         return area  # Retorna a área calculada

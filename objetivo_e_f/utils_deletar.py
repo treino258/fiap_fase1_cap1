@@ -1,14 +1,16 @@
-from utils_dados import CULTURA_1
-from utils_dados import CULTURA_2
+from objetivo_a.culturas import Culturas
+from objetivo_e_f.utils_menu import input_int
+
 
 # Função para deletar um dado específico dentro de cada cultura
-def deletar_formato_cultura(culturas, cultura_nome):
+def deletar_formato_cultura(culturas:Culturas, cultura_nome):
     print("\nEscolha o registro para deletar:")
-    if not culturas[cultura_nome]:
+    if len(culturas[cultura_nome]) == 0 or not culturas[cultura_nome]:
         print("Nenhum dado registrado.")
+        return
     else:
         for i, dado in enumerate(culturas[cultura_nome], 1):
-            print(f"  Registro {i}: Área = {dado['area']} m², Insumo = {dado['manejo']} mL")
+            print(f"  Registro {i}: Área = {dado}")
     
     # Solicita o índice antes de confirmar
     indice = input_int(f"Pressione 0 para voltar ao menu. Digite o índice do registro a ser deletado (1 a {len(culturas[cultura_nome])}): ")
@@ -33,4 +35,11 @@ def deletar_formato_cultura(culturas, cultura_nome):
         return  # Cancela a operação
     elif confirmacao == '1' or confirmacao == 'sim':
         culturas[cultura_nome].pop(indice - 1)
+
+        if cultura_nome == 'cultura_1':
+            culturas.remove_area_cultura_1(indice - 1)
+        else:
+            culturas.remove_area_cultura_2(indice - 1)
+
+
         print(f"Registro {indice} deletado com sucesso.")
