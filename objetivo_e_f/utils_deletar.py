@@ -11,7 +11,7 @@ def deletar_formato_cultura(culturas, cultura_nome):
             print(f"  Registro {i}: Área = {dado['area']} m², Insumo = {dado['manejo']} mL")
     
     # Solicita o índice antes de confirmar
-    indice = int(input(f"Pressione 0 para voltar ao menu. Digite o índice do registro a ser deletado (1 a {len(culturas[cultura_nome])}): "))
+    indice = input_int(f"Pressione 0 para voltar ao menu. Digite o índice do registro a ser deletado (1 a {len(culturas[cultura_nome])}): ")
     
     if indice == 0:
         print("Retornando ao menu principal.")

@@ -10,7 +10,7 @@ def atualizar_formato_cultura1(culturas, cultura_nome):  # Função para cultura
             print(f"  Registro {i}: Área = {dado['area']} m², Insumo = {dado['manejo']} mL")
     
     # Solicita o índice antes de confirmar
-    indice = int(input(f"Pressione 0 para voltar ao menu. Digite o índice do registro a ser atualizado (1 a {len(culturas[cultura_nome])}): "))
+    indice = input_int(f"Pressione 0 para voltar ao menu. Digite o índice do registro a ser atualizado (1 a {len(culturas[cultura_nome])}): ")
     
     if indice == 0:
         print("Retornando ao menu principal.")
@@ -47,13 +47,13 @@ def atualizar_formato_cultura1(culturas, cultura_nome):  # Função para cultura
         # Calcula a área para cultura1
         if forma_nome in {'1', 'retangular'}:
             print('Você escolheu o plantio Retangular.')
-            altura = float(input('Digite as dimensões do primeiro lado: '))
-            base = float(input('Digite as dimensões do segundo lado: '))
+            altura = input_float('Digite as dimensões do primeiro lado: ')
+            base = input_float('Digite as dimensões do segundo lado: ')
             area = base * altura
         elif forma_nome in {'2', 'triangular'}:
             print('Você escolheu o plantio Triangular.')
-            altura = float(input('Digite a altura do triângulo: '))
-            base = float(input('Digite a base do triângulo: '))
+            altura = input_float('Digite a altura do triângulo: ')
+            base = input_float('Digite a base do triângulo: ')
             area = (base * altura) / 2
         
         # Atualiza o dado no registro escolhido
@@ -72,7 +72,7 @@ def atualizar_formato_cultura2(culturas, cultura_nome):  # Função para cultura
             print(f"  Registro {i}: Área = {dado['area']} m², Insumo = {dado['manejo']} mL")
     
     # Solicita o índice antes de confirmar
-    indice = int(input(f"Pressione 0 para voltar ao menu. Digite o índice do registro a ser atualizado (1 a {len(culturas[cultura_nome])}): "))
+    indice = input_int(f"Pressione 0 para voltar ao menu. Digite o índice do registro a ser atualizado (1 a {len(culturas[cultura_nome])}): ")
     
     if indice == 0:
         print("Retornando ao menu principal.")
@@ -109,13 +109,13 @@ def atualizar_formato_cultura2(culturas, cultura_nome):  # Função para cultura
         # Calcula a área para cultura1
         if forma_nome in {'1', 'retangular'}:
             print('Você escolheu o plantio Retangular.')
-            altura = float(input('Digite as dimensões do primeiro lado: '))
-            base = float(input('Digite as dimensões do segundo lado: '))
+            altura = input_float('Digite as dimensões do primeiro lado: ')
+            base = input_float('Digite as dimensões do segundo lado: ')
             area = base * altura
         elif forma_nome in {'2', 'triangular'}:
             print('Você escolheu o plantio Triangular.')
-            altura = float(input('Digite a altura do triângulo: '))
-            base = float(input('Digite a base do triângulo: '))
+            altura = input_float('Digite a altura do triângulo: ')
+            base = input_float('Digite a base do triângulo: ')
             area = (base * altura) / 2
         
         # Atualiza o dado no registro escolhido

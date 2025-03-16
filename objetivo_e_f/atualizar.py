@@ -1,5 +1,5 @@
-from utils.atualizar.py import atualizar_formato_cultura1
-from utils.atualizar.py import atualizar_formato_cultura2
+from utils_atualizar.py import atualizar_formato_cultura1
+from utils_atualizar.py import atualizar_formato_cultura2
 from utils_dados import CULTURA_1
 from utils_dados import CULTURA_2
 

@@ -34,13 +34,13 @@ def entrada_dados(culturas):
             return None
         if forma_nome in {'1', 'retangular'}:
             print('Você escolheu o plantio Retangular.')
-            altura = float(input('Digite as dimensões do primeiro lado: '))
-            base = float(input('Digite as dimensões do segundo lado: '))
+            altura = input_float('Digite as dimensões do primeiro lado: ')
+            base = input_float('Digite as dimensões do segundo lado: ')
             area = base * altura
         elif forma_nome in {'2', 'triangular'}:
             print('Você escolheu o plantio Triangular.')
-            altura = float(input('Digite a altura do triângulo: '))
-            base = float(input('Digite a base do triângulo: '))
+            altura = input_float('Digite a altura do triângulo: ')
+            base = input_float('Digite a base do triângulo: ')
             area = (base * altura) / 2
 
         print(f'A área do plantio é: {area:.2f}m²')
@@ -63,13 +63,13 @@ def entrada_dados(culturas):
             return None
         if forma_nome in {'1', 'retangular'}:
             print('Você escolheu o plantio Retangular.')
-            altura = float(input('Digite as dimensões do primeiro lado: '))
-            base = float(input('Digite as dimensões do segundo lado: '))
+            altura = input_float('Digite as dimensões do primeiro lado: ')
+            base = input_float('Digite as dimensões do segundo lado: ')
             area = base * altura
         elif forma_nome in {'2', 'triangular'}:
             print('Você escolheu o plantio Triangular.')
-            altura = float(input('Digite a altura do triângulo: '))
-            base = float(input('Digite a base do triângulo: '))
+            altura = input_float('Digite a altura do triângulo: ')
+            base = input_float('Digite a base do triângulo: ')
             area = (base * altura) / 2
 
         print(f'A área do plantio é: {area:.2f}m²')
