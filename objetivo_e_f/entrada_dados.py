@@ -1,5 +1,5 @@
 from objetivo_e_f.utils_menu import input_float
-from utils_menu import calcular_manejo
+from objetivo_e_f.utils_menu import calcular_manejo
 from objetivo_a.culturas import CULTURA_1, CULTURA_2, Culturas
 
 

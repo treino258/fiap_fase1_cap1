@@ -1,4 +1,4 @@
-from utils_deletar import deletar_formato_cultura
+from objetivo_e_f.utils_deletar import deletar_formato_cultura
 from objetivo_a.culturas import CULTURA_1, CULTURA_2, Culturas
 
 
@@ -14,10 +14,16 @@ def deletar_dados(culturas:Culturas):
     # Mapeia as escolhas para as chaves do dicionário
     if cultura_nome == '0' or cultura_nome == 'voltar ao menu':
         return
+
     if cultura_nome == '1':
         cultura_nome = 'cultura1'
+
     elif cultura_nome == '2':
         cultura_nome = 'cultura2'
+
+    else:
+        print("Cultura não reconhecida. Retornando ao menu.")
+        return
     
     print(f"Você escolheu a {cultura_nome} para deletar os dados.")
     if cultura_nome == 'cultura1':

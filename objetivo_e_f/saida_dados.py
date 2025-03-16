@@ -19,6 +19,9 @@ def saida_dados(culturas: Culturas):
         cultura_nome = CULTURA_1
     elif cultura_nome in {'2', 'CULTURA_2'}:
         cultura_nome = CULTURA_2
+    else:
+        print("Cultura não reconhecida. Retornando ao menu.")
+        return
     
     print(f"\nDados para {cultura_nome}:")
     if not culturas[cultura_nome]:

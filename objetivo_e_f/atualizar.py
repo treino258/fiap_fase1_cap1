@@ -1,5 +1,5 @@
-from utils_atualizar import atualizar_formato_cultura1
-from utils_atualizar import atualizar_formato_cultura2
+from objetivo_e_f.utils_atualizar import atualizar_formato_cultura1
+from objetivo_e_f.utils_atualizar import atualizar_formato_cultura2
 from objetivo_a.culturas import CULTURA_1, CULTURA_2
 
 # Função para atualizar dados de cultura
@@ -18,6 +18,9 @@ def atualizar_dados(culturas):
         cultura_nome = CULTURA_1
     elif cultura_nome == '2':
         cultura_nome = CULTURA_2
+    else:
+        print("Cultura não reconhecida. Retornando ao menu.")
+        return
 
 
     print(f"Você escolheu a {cultura_nome} para atualizar os dados.")
