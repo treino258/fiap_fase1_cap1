@@ -11,6 +11,8 @@ class Culturas:
     cultura_1 = []
     cultura_2 = []
 
+
+
     # def append_cultura_1(self):
     #     self.cultura_1.append({
     #         "Tipo": tipo,
