@@ -1,4 +1,3 @@
+from objetivo_e_f.menu import main_menu
 
-
-if __name__ == '__main__':
-    print('Hello World')
+main_menu()
