@@ -27,5 +27,5 @@ def adicionar_cultura():
     })
     print("\n✅ Cultura adicionada com sucesso!\n")
 
-
-adicionar_cultura()
+if __name__ == "__main__":
+    adicionar_cultura()
