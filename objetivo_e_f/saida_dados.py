@@ -1,5 +1,5 @@
-from utils.dados.py import cultura1
-from utils.dados.py import cultura2
+from utils_dados.py import cultura1
+from utils_dados.py import cultura2
 
 # Função para saída de dados
 def saida_dados(culturas):

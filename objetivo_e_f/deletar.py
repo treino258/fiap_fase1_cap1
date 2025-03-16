@@ -1,6 +1,6 @@
-from utils.deletar.py import deletar_formato_cultura
-from utils.dados.py import cultura1
-from utils.dados.py import cultura2
+from utils_deletar.py import deletar_formato_cultura
+from utils_dados.py import cultura1
+from utils_dados.py import cultura2
 
 # Função para atualizar dados de cultura
 def atualizar_dados(culturas):

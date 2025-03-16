@@ -1,6 +1,6 @@
-from utils.dados.py import cultura1
-from utils.dados.py import cultura2
-from utils.menu.py import calcular_manejo
+from utils_dados.py import cultura1
+from utils_dados.py import cultura2
+from utils_menu.py import calcular_manejo
 
 # Função para entrada de dados de cultura
 def entrada_dados(culturas):

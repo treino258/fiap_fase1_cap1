@@ -1,5 +1,5 @@
-from entrada.dados.py import entrada_dados # Importando a função de entrada de dados
-from saida.dados.py import saida_dados # Importando a função de saída de dados
+from entrada_dados.py import entrada_dados # Importando a função de entrada de dados
+from saida_dados.py import saida_dados # Importando a função de saída de dados
 from atualizar.py import atualizar_dados # Importando a função de atualização de dados
 from deletar.py import deletar_dados # Importando a função de deleção de dados
 
