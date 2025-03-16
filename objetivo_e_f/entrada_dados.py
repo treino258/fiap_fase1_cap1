@@ -7,18 +7,18 @@ def entrada_dados(culturas):
     print("\nEntrada de Dados:")
     cultura_nome = input("""
  0 - VOLTAR AO MENU
- 1 - cultura1
- 2 - cultura2
+ 1 - [CULTURA_1]
+ 2 - [CULTURA_2]
     """).strip().lower()
     
     if cultura_nome in ('0', 'voltar ao menu', 'voltar'):
         print ("Retornando ao menu principal.")
         return
-    if cultura_nome not in {'1', 'cultura1', '2', 'cultura2'}:
+    if cultura_nome not in {'1', 'CULTURA_1', '2', 'CULTURA_2'}:
         print("Cultura não reconhecida. Retornando ao menu.")
         return
-    if cultura_nome in {'1', 'cultura1'}:
-        cultura_nome = 'cultura1'
+    if cultura_nome in {'1', 'CULTURA_1'}:
+        cultura_nome = 'CULTURA_1'
     def entrada_formato():# Função para entrada de formato do plantio (dentro de entrada_dados)
         print("\nEscolha a forma do seu terreno:")
         forma_nome = input("""
@@ -45,8 +45,8 @@ def entrada_dados(culturas):
 
         print(f'A área do plantio é: {area:.2f}m²')
         return area  # Retorna a área calculada
-    if cultura_nome in {'2', 'cultura2'}:
-        cultura_nome = 'cultura2'
+    if cultura_nome in {'2', 'CULTURA_2'}:
+        cultura_nome = 'CULTURA_2'
     def entrada_formato():# Função para entrada de formato do plantio (dentro de entrada_dados)
         print("\nEscolha a forma do seu terreno:")
         forma_nome = input("""

@@ -1,5 +1,5 @@
-from utils_dados.py import cultura1
-from utils_dados.py import cultura2
+from utils_dados import CULTURA_1
+from utils_dados import CULTURA_2
 
 # Função para calcular o manejo de insumo com base na área
 def calcular_manejo(cultura, area):

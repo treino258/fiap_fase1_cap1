@@ -1,5 +1,5 @@
-from utils_dados.py import cultura1
-from utils_dados.py import cultura2
+from utils_dados import CULTURA_1
+from utils_dados import CULTURA_2
 
 # Função para deletar um dado específico dentro de cada cultura
 def deletar_formato_cultura(culturas, cultura_nome):

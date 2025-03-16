@@ -1,5 +1,5 @@
-from utils_dados.py import cultura1
-from utils_dados.py import cultura2
+from utils_dados import CULTURA_1
+from utils_dados import CULTURA_2
 
 def atualizar_formato_cultura1(culturas, cultura_nome):  # Função para cultura1
     print("\nEscolha o registro para atualizar:")
