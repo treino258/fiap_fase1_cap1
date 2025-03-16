@@ -60,8 +60,8 @@ menu_weather <- function(){
     cat(strrep("-", 20), "\n")
     cat(sprintf("%10s\n", "Menu"))
     cat(strrep("-", 20), "\n")
-    print("1 - Previsão do tempo de hoje")
-    print("2 - Previsão do tempo da proxima semana")
+    print("1 - Previsao do tempo de hoje")
+    print("2 - Previsao do tempo da proxima semana")
     print("3 - Previsao do tempo da semana passada")
     print("4 - Sair")
 
