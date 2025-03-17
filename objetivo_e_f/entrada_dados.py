@@ -72,5 +72,8 @@ def entrada_dados(culturas:Culturas):
 
     # Calcular o manejo de insumo automaticamente com base na cultura e na área
     manejo = calcular_manejo(cultura_nome, area)
-
-    print(f"Dados de {cultura_nome} registrados com sucesso. Manejo de insumo calculado: {manejo} mL.")
+    
+    ruas_min = area // 0.9
+    ruas_max = area // 0.5
+    
+    print(f"Dados de {cultura_nome} registrados com sucesso. Manejo de insumo calculado: {manejo} mL. Ruas calculadas: {ruas_min:.0f} a {ruas_max:.0f} ruas.")
